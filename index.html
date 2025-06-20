@@ -11,16 +11,17 @@
 <body>
   <header>
     <h1>Marcos Roberto Medeiros Bezerra</h1>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+  <nav>
+    <ul id="menu" class="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
     <img src="WhatsApp Image 2025-06-08 at 10.03.13.jpeg" alt="Foto de Marcos Roberto Medeiros Bezerra" class="foto-redonda">
   </header>
   <section id="sobre">
@@ -137,14 +138,28 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: robertomarcostst@gmail.com</p>
-    <p>Telefone: (88) 9 9974-2403</p>
+    <p>Email:<a href="mailto:robertomarcostst@gmail.com" style="color: #0f3d0f; text-decoration: underline;">
+        robertomarcostst@gmail.com </p>
+    <p><a href="https://wa.me/5588999742403" target="_blank" style="color: #0f3d0f; text-decoration: underline;">
+        Fale comigo no WhatsApp
+      </a></p>
     <p>Localização: Aracati - CE</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Marcos Roberto Medeiros Bezerra</p>
   </footer>
+
+
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    toggleButton.textContent = menu.classList.contains('open') ? '✕' : '☰';
+  });
+</script>
 
 
 </body>
